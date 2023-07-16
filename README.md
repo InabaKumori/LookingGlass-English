@@ -5,6 +5,7 @@
 ## Quick start
 ```
 docker run -d --name looking-glass --restart always --network host wikihostinc/looking-glass-server
+docker run -d --name looking-glass --restart always --network host -e HTTP_PORT=5001 -e UTILITIES_IPERF3=false -e UTILITIES_FAKESHELL=false trcoot/looking-glass
 ```
 
 [DEMO](http://lg.hk1-bgp.hkg.50network.com/)
