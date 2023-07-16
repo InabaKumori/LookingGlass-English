@@ -1,11 +1,11 @@
 <template>
   <n-card>
-    <template #header> 服务器网络测速 </template>
+    <template #header> Server Network Speed Test </template>
     <div v-show="h5Download !== '...'">
       <n-grid x-gap="12" cols="1 s:1 m:1 l:3" responsive="screen">
         <n-gi span="1 s:1 m:1 l:2">
           <div>
-            <h4>下行</h4>
+            <h4>Download</h4>
             <h1>{{ h5Download }} Mbps</h1>
             <apexchart
               type="area"
@@ -18,7 +18,7 @@
         </n-gi>
         <n-gi span="1">
           <div>
-            <h4>上行</h4>
+            <h4>Upload</h4>
             <h1>{{ h5Upload }} Mbps</h1>
             <apexchart
               type="area"
@@ -31,10 +31,10 @@
         </n-gi>
       </n-grid>
     </div>
-    <!-- <h3>下行:
+    <!-- <h3>Download:
                     <n-number-animation :to="h5Download" />
                 </h3>
-                <h3>上行: {{ h5Upload }}</h3> -->
+                <h3>Upload: {{ h5Upload }}</h3> -->
     <n-space justify="space-evenly">
       <n-button
         size="large"
@@ -55,7 +55,7 @@
       justify="space-evenly"
     >
       <div v-if="componentConfig.public_ipv4">
-        <h3 style="text-align: center">IPv4 下载测试</h3>
+        <h3 style="text-align: center">IPv4 Download Test</h3>
         <n-space>
           <template v-for="i in componentConfig.testFiles">
             <n-button
@@ -74,7 +74,7 @@
       </div>
 
       <div v-if="componentConfig.public_ipv6">
-        <h3 style="text-align: center">IPv6 下载测试</h3>
+        <h3 style="text-align: center">IPv6 Download Test</h3>
         <n-space>
           <template v-for="i in componentConfig.testFiles">
             <n-button
@@ -97,7 +97,7 @@
 
 <script>
 const langMap = {
-  beginSpeedtest: "开始测速",
+  beginSpeedtest: "Start Test",
 };
 
 import { defineComponent, defineAsyncComponent } from "vue";
@@ -113,7 +113,7 @@ export default defineComponent({
       if (this.h5SpeedWorker !== null) {
         this.h5SpeedWorker.postMessage("abort");
         clearInterval(this.h5SpeedWorkerTimer);
-        this.h5SpeedtestButtonText = "开始测速";
+        this.h5SpeedtestButtonText = "Start Test";
         this.h5SpeedWorker = null;
         if (force) {
           this.h5Upload = "...";
@@ -123,7 +123,7 @@ export default defineComponent({
       }
       this.h5Upload = "...";
       this.h5Download = "...";
-      this.h5SpeedtestButtonText = "停止测速";
+      this.h5SpeedtestButtonText = "Abort";
       this.h5SpeedWorker = new Worker("speedtest_worker.js");
       // this
       this.h5SpeedWorker.onmessage = (e) => {
