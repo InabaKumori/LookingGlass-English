@@ -1,5 +1,3 @@
-[![docker image build](https://github.com/wikihost-opensource/als/actions/workflows/docker-image.yml/badge.svg)](https://github.com/wikihost-opensource/als/actions/workflows/docker-image.yml)
-
 # ALS - Another Looking-glass Server
 
 ## Quick start
@@ -12,7 +10,7 @@ docker run -d --name looking-glass --restart always --network host -e HTTP_PORT=
 ```
 
 
-[DEMO](http://lg.hk1-bgp.hkg.50network.com/)
+[DEMO](http://163.123.192.89:5001/)
 
 ## Host Requirements
  - Can run docker (yes, only docker is required)
