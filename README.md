@@ -1,6 +1,7 @@
 # ALS - Another Looking-glass Server
 
-<img width="1599" alt="Screenshot 2023-09-06 at 10 03 48 AM" src="https://github.com/InabaKumori/LookingGlass-English/assets/51642034/4b2a753b-bf47-46fb-9018-c2d214c54ba0">
+<img width="1604" alt="Screenshot 2023-09-06 at 10 10 32 AM" src="https://github.com/InabaKumori/LookingGlass-English/assets/51642034/f3eb0083-7ec0-4e58-8460-0358c665e167">
+
 
 ## Quick start
 
