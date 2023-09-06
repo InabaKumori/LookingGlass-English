@@ -1,6 +1,9 @@
 # ALS - Another Looking-glass Server
 
+<img width="1599" alt="Screenshot 2023-09-06 at 10 03 48 AM" src="https://github.com/InabaKumori/LookingGlass-English/assets/51642034/4b2a753b-bf47-46fb-9018-c2d214c54ba0">
+
 ## Quick start
+
 ```
 docker run -d --name looking-glass --restart always --network host trcoot/looking-glass
 ```
